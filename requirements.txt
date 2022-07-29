@@ -133,6 +133,7 @@ pep8-naming==0.13.0
 pexpect==4.6.0
 Pillow==8.2.0
 pre-commit==2.19.0
+prettytable==3.3.0
 protobuf==3.19.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
@@ -205,6 +206,7 @@ utils==1.0.1
 uWSGI==2.0.19.1
 virtualenv==20.0.17
 wadllib==1.3.3
+wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==0.53.0
 wrapt==1.12.1
