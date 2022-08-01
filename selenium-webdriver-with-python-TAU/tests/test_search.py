@@ -3,12 +3,13 @@
 # Every function must be prefix with test keyword
 from pages.result import DuckDuckGoResultPage
 from pages.search import DuckDuckGoSearchPage
+import pytest
 
 
-def test_basic_duckduckgo_search(browser):
+@pytest.mark.parametrize('PHRASE', ['panda', 'python', 'polar bear'])
+def test_basic_duckduckgo_search(browser, PHRASE):
     search_page = DuckDuckGoSearchPage(browser)
     result_page = DuckDuckGoResultPage(browser)
-    PHRASE = 'panda'
 
     # Given the duckduckgo home page is displayed
     search_page.load()
