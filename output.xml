@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220802 18:54:34.854" rpa="false" schemaversion="3">
+<suite id="s1" name="Update Info" source="/home/congviet/Desktop/automation_test/robot_framework/Test Cases For VietDevShop/update_info.robot">
+<test id="s1-t1" name="LOGIN TEST CASE" line="7">
+<kw name="Comment" library="BuiltIn">
+<arg>Login Viet Dev Shop AutomationTest</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220802 18:54:34.925" endtime="20220802 18:54:34.925"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${login_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220802 18:54:34.925" level="INFO">Opening browser 'chrome' to base url 'https://vietdevshop.herokuapp.com/login/'.</msg>
+<status status="PASS" starttime="20220802 18:54:34.925" endtime="20220802 18:55:00.775"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220802 18:55:00.777" level="INFO">Typing text 'tranviet' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20220802 18:55:00.776" endtime="20220802 18:55:00.823"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220802 18:55:00.824" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20220802 18:55:00.844" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220802 18:55:00.863" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220802 18:55:00.824" endtime="20220802 18:55:00.864"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="wrapper"]/section/div/div/div/div[2]/div/div[6]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 18:55:00.864" level="INFO">Clicking element 'xpath=//*[@id="wrapper"]/section/div/div/div/div[2]/div/div[6]/button'.</msg>
+<status status="PASS" starttime="20220802 18:55:00.864" endtime="20220802 18:55:00.887"/>
+</kw>
+<status status="PASS" starttime="20220802 18:54:34.924" endtime="20220802 18:55:00.887"/>
+</test>
+<status status="PASS" starttime="20220802 18:54:34.854" endtime="20220802 18:55:00.887"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Update Info">Update Info</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

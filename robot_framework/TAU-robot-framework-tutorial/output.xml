@@ -1,52 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220802 12:55:29.143" rpa="false" schemaversion="3">
-<suite id="s1" name="Robot Interactive Console" source="/home/congviet/.vscode/extensions/robocorp.robotframework-lsp-0.49.0/src/robotframework_ls/vendored/robotframework_interactive/robot_interactive_console.robot">
-<test id="s1-t1" name="Default Task/Test" line="5">
-<kw name="Interpreter Main Loop" library="MainLoop">
-<kw name="Should Be Equal As Integers" library="BuiltIn">
-<arg>5</arg>
-<arg>${sum}</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<msg timestamp="20220802 12:56:09.819" level="FAIL">Variable '${sum}' not found.</msg>
-<status status="FAIL" starttime="20220802 12:56:09.818" endtime="20220802 12:56:09.819"/>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220802 17:49:13.924" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Testcase03" source="/home/congviet/Desktop/automation_test/robot_framework/TAU-robot-framework-tutorial/robot_testcase03.robot">
+<test id="s1-t1" name="Check invoice manager contained in page" line="4">
+<kw name="Comment" library="BuiltIn">
+<arg>${comment}</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220802 17:49:13.995" endtime="20220802 17:49:13.995"/>
 </kw>
-<kw name="Add">
-<var>${sum}</var>
-<arg>2</arg>
-<arg>3</arg>
-<msg timestamp="20220802 12:56:18.386" level="FAIL">No keyword with name 'Add' found.</msg>
-<status status="FAIL" starttime="20220802 12:56:18.385" endtime="20220802 12:56:18.386"/>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220802 17:49:13.996" level="INFO">Opening browser 'chrome' to base url 'http://34.225.240.91/'.</msg>
+<status status="PASS" starttime="20220802 17:49:13.995" endtime="20220802 17:49:17.081"/>
 </kw>
-<kw name="Add">
-<var>${sum}</var>
-<arg>2</arg>
-<arg>3</arg>
-<kw name="Evaluate" library="BuiltIn">
-<var>${value}</var>
-<arg>${first_num} + ${second_num}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220802 12:56:51.109" level="INFO">${value} = 5</msg>
-<status status="PASS" starttime="20220802 12:56:51.109" endtime="20220802 12:56:51.109"/>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${phrase}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220802 17:49:17.093" level="INFO">Current page contains text 'Invoice Manager'.</msg>
+<status status="PASS" starttime="20220802 17:49:17.083" endtime="20220802 17:49:17.094"/>
 </kw>
-<msg timestamp="20220802 12:56:51.109" level="INFO">${sum} = 5</msg>
-<status status="PASS" starttime="20220802 12:56:51.109" endtime="20220802 12:56:51.109"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${sum{</arg>
-<doc>Logs the given message to the console.</doc>
-<msg timestamp="20220802 12:57:06.849" level="FAIL">Variable '${sum{' was not closed properly.</msg>
-<status status="FAIL" starttime="20220802 12:57:06.849" endtime="20220802 12:57:06.849"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${sum}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220802 12:57:10.361" endtime="20220802 12:57:10.362"/>
-</kw>
-<status status="PASS" starttime="20220802 12:55:29.153" endtime="20220802 14:19:25.220"/>
-</kw>
-<status status="PASS" starttime="20220802 12:55:29.152" endtime="20220802 14:19:25.221"/>
+<status status="PASS" starttime="20220802 17:49:13.995" endtime="20220802 17:49:17.094"/>
 </test>
-<status status="PASS" starttime="20220802 12:55:29.143" endtime="20220802 14:19:25.221"/>
+<status status="PASS" starttime="20220802 17:49:13.924" endtime="20220802 17:49:17.094"/>
 </suite>
 <statistics>
 <total>
@@ -55,7 +31,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Testcase03">Robot Testcase03</stat>
 </suite>
 </statistics>
 <errors>
