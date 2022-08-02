@@ -16,8 +16,8 @@ TEST CASE 2
     ${sum} =  Add  2  3
     # Check if correct result returned
     Should Be Equal As Integers  ${sum}  6
-*** Keywords ***
 
+*** Keywords ***
 Print Profile
     [Arguments]  ${first_name}  ${last_name}  ${job}  ${facebook}
     Log To Console    \n  
