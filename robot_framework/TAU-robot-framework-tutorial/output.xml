@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220802 12:50:13.765" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Testcase02" source="/home/congviet/Desktop/automation_test/robot_framework/TAU-robot-framework-tutorial/robot_testcase02.robot">
+<test id="s1-t1" name="TEST CASE 1" line="4">
+<kw name="Set Variable" library="BuiltIn">
+<var>${nick_name}</var>
+<arg>Viet</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220802 12:50:13.776" level="INFO">${nick_name} = Viet</msg>
+<status status="PASS" starttime="20220802 12:50:13.776" endtime="20220802 12:50:13.776"/>
+</kw>
+<kw name="Print Profile">
+<arg>${nick_name}</arg>
+<arg>Tran</arg>
+<arg>Developer</arg>
+<arg>https://www.facebook.com/pikapika0710</arg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220802 12:50:13.777" endtime="20220802 12:50:13.777"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>First Name: ${first_name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220802 12:50:13.777" endtime="20220802 12:50:13.777"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Last name: ${last_name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220802 12:50:13.777" endtime="20220802 12:50:13.777"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Job: ${job}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220802 12:50:13.777" endtime="20220802 12:50:13.777"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Facebook: ${facebook}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220802 12:50:13.777" endtime="20220802 12:50:13.777"/>
+</kw>
+<status status="PASS" starttime="20220802 12:50:13.776" endtime="20220802 12:50:13.777"/>
+</kw>
+<kw name="Change Nickname">
+<var>${nick_name}</var>
+<arg>${nick_name}</arg>
+<arg>VietDev</arg>
+<msg timestamp="20220802 12:50:13.778" level="INFO">${nick_name} = VietDev</msg>
+<status status="PASS" starttime="20220802 12:50:13.777" endtime="20220802 12:50:13.778"/>
+</kw>
+<kw name="Print Profile">
+<arg>${nick_name}</arg>
+<arg>Tran</arg>
+<arg>Developer</arg>
+<arg>https://www.facebook.com/pikapika0710</arg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220802 12:50:13.778" endtime="20220802 12:50:13.778"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>First Name: ${first_name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220802 12:50:13.778" endtime="20220802 12:50:13.778"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Last name: ${last_name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220802 12:50:13.778" endtime="20220802 12:50:13.778"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Job: ${job}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220802 12:50:13.778" endtime="20220802 12:50:13.778"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Facebook: ${facebook}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220802 12:50:13.778" endtime="20220802 12:50:13.779"/>
+</kw>
+<status status="PASS" starttime="20220802 12:50:13.778" endtime="20220802 12:50:13.779"/>
+</kw>
+<status status="PASS" starttime="20220802 12:50:13.776" endtime="20220802 12:50:13.779"/>
+</test>
+<test id="s1-t2" name="TEST CASE 2" line="14">
+<kw name="Add">
+<var>${sum}</var>
+<arg>2</arg>
+<arg>3</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${value}</var>
+<arg>${first_num} + ${second_num}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220802 12:50:13.779" level="INFO">${value} = 5</msg>
+<status status="PASS" starttime="20220802 12:50:13.779" endtime="20220802 12:50:13.779"/>
+</kw>
+<msg timestamp="20220802 12:50:13.779" level="INFO">${sum} = 5</msg>
+<status status="PASS" starttime="20220802 12:50:13.779" endtime="20220802 12:50:13.779"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${sum}</arg>
+<arg>6</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20220802 12:50:13.780" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg timestamp="20220802 12:50:13.780" level="FAIL">5 != 6</msg>
+<status status="FAIL" starttime="20220802 12:50:13.779" endtime="20220802 12:50:13.780"/>
+</kw>
+<status status="FAIL" starttime="20220802 12:50:13.779" endtime="20220802 12:50:13.780">5 != 6</status>
+</test>
+<status status="FAIL" starttime="20220802 12:50:13.766" endtime="20220802 12:50:13.780"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Robot Testcase02">Robot Testcase02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
