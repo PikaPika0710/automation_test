@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220802 11:09:45.474" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220802 11:37:41.288" rpa="false" schemaversion="3">
 <suite id="s1" name="Test" source="/home/congviet/Desktop/selenium/robot_framework/test.robot">
-<test id="s1-t1" name="Create an Invoice" line="4">
+<test id="s1-t1" name="Create an Invoice" line="6">
+<kw name="My Keyword">
 <kw name="Comment" library="BuiltIn">
-<arg>This is my first robotframework test case!</arg>
+<arg>This is my keyword test case!</arg>
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
-<status status="PASS" starttime="20220802 11:09:45.544" endtime="20220802 11:09:45.544"/>
+<status status="PASS" starttime="20220802 11:37:41.364" endtime="20220802 11:37:41.364"/>
 </kw>
+<status status="PASS" starttime="20220802 11:37:41.364" endtime="20220802 11:37:41.364"/>
+</kw>
+<kw name="Navigate to Home Page">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://34.225.240.91/</arg>
+<arg>http://34.225.240.91</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220802 11:09:45.544" level="INFO">Opening browser 'chrome' to base url 'http://34.225.240.91/'.</msg>
-<status status="PASS" starttime="20220802 11:09:45.544" endtime="20220802 11:09:52.048"/>
+<msg timestamp="20220802 11:37:41.364" level="INFO">Opening browser 'chrome' to base url 'http://34.225.240.91'.</msg>
+<status status="PASS" starttime="20220802 11:37:41.364" endtime="20220802 11:37:47.338"/>
 </kw>
-<status status="PASS" starttime="20220802 11:09:45.543" endtime="20220802 11:09:52.050"/>
+<status status="PASS" starttime="20220802 11:37:41.364" endtime="20220802 11:37:47.339"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Invoice Manager</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220802 11:37:47.347" level="INFO">Current page contains text 'Invoice Manager'.</msg>
+<status status="PASS" starttime="20220802 11:37:47.339" endtime="20220802 11:37:47.347"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220802 11:37:47.347" endtime="20220802 11:37:47.401"/>
+</kw>
+<status status="PASS" starttime="20220802 11:37:41.363" endtime="20220802 11:37:47.401"/>
 </test>
-<status status="PASS" starttime="20220802 11:09:45.475" endtime="20220802 11:09:52.052"/>
+<status status="PASS" starttime="20220802 11:37:41.289" endtime="20220802 11:37:47.401"/>
 </suite>
 <statistics>
 <total>
