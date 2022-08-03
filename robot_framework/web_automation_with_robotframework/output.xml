@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220803 14:05:48.480" rpa="false" schemaversion="3">
+<suite id="s1" name="Input Validation" source="/home/congviet/Desktop/automation_test/robot_framework/web_automation_with_robotframework/input_validation.robot">
+<test id="s1-t1" name="ValidationTest" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 14:05:48.551" level="INFO">Opening browser 'chrome' to base url 'https://id.zing.vn/'.</msg>
+<status status="PASS" starttime="20220803 14:05:48.551" endtime="20220803 14:05:50.350"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220803 14:05:50.351" endtime="20220803 14:05:50.357"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220803 14:05:50.358" endtime="20220803 14:05:50.463"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${expected_title}</var>
+<arg>Zing ID - Zing Passport - Tài khoản Zing của VNG</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220803 14:05:50.464" level="INFO">${expected_title} = Zing ID - Zing Passport - Tài khoản Zing của VNG</msg>
+<status status="PASS" starttime="20220803 14:05:50.464" endtime="20220803 14:05:50.464"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220803 14:05:50.477" level="INFO">Page title is 'Zing ID - Zing Passport - Tài khoản Zing của VNG'.</msg>
+<status status="PASS" starttime="20220803 14:05:50.465" endtime="20220803 14:05:50.477"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${username_input}</var>
+<arg>//input[@name='u']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220803 14:05:50.478" level="INFO">${username_input} = //input[@name='u']</msg>
+<status status="PASS" starttime="20220803 14:05:50.477" endtime="20220803 14:05:50.478"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${username_input}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220803 14:05:50.479" endtime="20220803 14:05:50.501"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${username_input}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220803 14:05:50.510" level="INFO">Element '//input[@name='u']' is displayed.</msg>
+<status status="PASS" starttime="20220803 14:05:50.501" endtime="20220803 14:05:50.510"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${time_out}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220803 14:05:52.511" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220803 14:05:50.510" endtime="20220803 14:05:52.511"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_input}</arg>
+<arg>${username}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 14:05:52.513" level="INFO">Typing text 'tydeptrai12345' into text field '//input[@name='u']'.</msg>
+<status status="PASS" starttime="20220803 14:05:52.512" endtime="20220803 14:05:52.582"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${password_input}</var>
+<arg>//input[@name='p']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220803 14:05:52.582" level="INFO">${password_input} = //input[@name='p']</msg>
+<status status="PASS" starttime="20220803 14:05:52.582" endtime="20220803 14:05:52.582"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_input}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 14:05:52.583" level="INFO">Typing text 'helloworld' into text field '//input[@name='p']'.</msg>
+<status status="PASS" starttime="20220803 14:05:52.582" endtime="20220803 14:05:52.617"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${time_out}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220803 14:05:54.617" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220803 14:05:52.617" endtime="20220803 14:05:54.618"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${username_input}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220803 14:05:54.619" endtime="20220803 14:05:54.652"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${password_input}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220803 14:05:54.652" endtime="20220803 14:05:54.665"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${time_out}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220803 14:05:56.665" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220803 14:05:54.665" endtime="20220803 14:05:56.666"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220803 14:05:56.666" endtime="20220803 14:05:56.727"/>
+</kw>
+<status status="PASS" starttime="20220803 14:05:48.550" endtime="20220803 14:05:56.728"/>
+</test>
+<status status="PASS" starttime="20220803 14:05:48.481" endtime="20220803 14:05:56.728"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Input Validation">Input Validation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220803 10:44:07.258" rpa="false" schemaversion="3">
+<suite id="s1" name="Update Info" source="/home/congviet/Desktop/automation_test/robot_framework/vietdevshop-test-cases/update_info.robot">
+<test id="s1-t1" name="LOGIN TEST CASE" line="7">
+<kw name="Comment" library="BuiltIn">
+<arg>Login Viet Dev Shop AutomationTest</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220803 10:44:07.333" endtime="20220803 10:44:07.333"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${login_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 10:44:07.334" level="INFO">Opening browser 'chrome' to base url 'https://vietdevshop.herokuapp.com/login/'.</msg>
+<status status="PASS" starttime="20220803 10:44:07.333" endtime="20220803 10:44:12.112"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220803 10:44:12.113" endtime="20220803 10:44:12.223"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 10:44:12.225" level="INFO">Typing text 'tranviet' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20220803 10:44:12.224" endtime="20220803 10:44:12.282"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 10:44:12.282" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20220803 10:44:12.300" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220803 10:44:12.320" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220803 10:44:12.282" endtime="20220803 10:44:12.320"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="wrapper"]/section/div/div/div/div[2]/div/div[6]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220803 10:44:12.320" level="INFO">Clicking button 'xpath=//*[@id="wrapper"]/section/div/div/div/div[2]/div/div[6]/button'.</msg>
+<status status="PASS" starttime="20220803 10:44:12.320" endtime="20220803 10:44:12.349"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220803 10:44:13.350" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220803 10:44:12.350" endtime="20220803 10:44:13.351"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="navbar-menu"]/div[2]/div[4]/div/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 10:44:13.352" level="INFO">Clicking element 'xpath=//*[@id="navbar-menu"]/div[2]/div[4]/div/a[2]'.</msg>
+<status status="PASS" starttime="20220803 10:44:13.351" endtime="20220803 10:44:13.445"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="wrapper"]/section/div/div/div[2]/div/div[3]/div[2]/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220803 10:44:13.445" endtime="20220803 10:44:13.463"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220803 10:44:15.464" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220803 10:44:13.463" endtime="20220803 10:44:15.464"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="wrapper"]/section/div/div/div[2]/div/div[3]/div[2]/input</arg>
+<arg>${email}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 10:44:15.465" level="INFO">Typing text 'viet.tran@paradox.ai' into text field 'xpath=//*[@id="wrapper"]/section/div/div/div[2]/div/div[3]/div[2]/input'.</msg>
+<status status="PASS" starttime="20220803 10:44:15.464" endtime="20220803 10:44:15.539"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="wrapper"]/section/div/div/div[2]/div/div[3]/div[3]/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220803 10:44:15.540" endtime="20220803 10:44:15.559"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="wrapper"]/section/div/div/div[2]/div/div[3]/div[3]/input</arg>
+<arg>${job}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 10:44:15.559" level="INFO">Typing text 'Fullstack-Developer' into text field 'xpath=//*[@id="wrapper"]/section/div/div/div[2]/div/div[3]/div[3]/input'.</msg>
+<status status="PASS" starttime="20220803 10:44:15.559" endtime="20220803 10:44:15.595"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220803 10:44:17.595" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220803 10:44:15.595" endtime="20220803 10:44:17.596"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="wrapper"]/section/div/div/div[2]/div/div[5]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220803 10:44:17.597" level="INFO">Clicking button 'xpath=//*[@id="wrapper"]/section/div/div/div[2]/div/div[5]/button'.</msg>
+<status status="PASS" starttime="20220803 10:44:17.596" endtime="20220803 10:44:17.645"/>
+</kw>
+<status status="PASS" starttime="20220803 10:44:07.333" endtime="20220803 10:44:17.645"/>
+</test>
+<status status="PASS" starttime="20220803 10:44:07.265" endtime="20220803 10:44:17.645"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Update Info">Update Info</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
