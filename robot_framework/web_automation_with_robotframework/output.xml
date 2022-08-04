@@ -1,82 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220804 14:20:58.549" rpa="false" schemaversion="3">
-<suite id="s1" name="Wait Timeout" source="/home/congviet/Desktop/automation_test/robot_framework/web_automation_with_robotframework/wait_timeout.robot">
-<test id="s1-t1" name="wait_timeout testcase" line="8">
-<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20220805 00:15:00.516" rpa="false" schemaversion="3">
+<suite id="s1" name="Alert" source="/home/congviet/Desktop/automation_test/robot_framework/web_automation_with_robotframework/alert.robot">
+<test id="s1-t1" name="WindowTest" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220804 14:20:58.620" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
-<msg timestamp="20220804 14:20:58.620" level="INFO">Firefox driver log is always forced to to: /home/congviet/Desktop/automation_test/robot_framework/web_automation_with_robotframework/geckodriver-8.log</msg>
-<status status="PASS" starttime="20220804 14:20:58.620" endtime="20220804 14:20:59.840"/>
+<msg timestamp="20220805 00:15:00.591" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20220805 00:15:00.591" endtime="20220805 00:15:05.458"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${demo_url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220804 14:20:59.841" level="INFO">Opening url 'https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm'</msg>
-<status status="PASS" starttime="20220804 14:20:59.841" endtime="20220804 14:21:11.526"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220805 00:15:08.458" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220805 00:15:05.458" endtime="20220805 00:15:08.459"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220804 14:21:11.526" endtime="20220804 14:21:11.808"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${click_me}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220805 00:15:08.460" level="INFO">Clicking button '//*[@id="HTML9"]/div[1]/button'.</msg>
+<status status="PASS" starttime="20220805 00:15:08.459" endtime="20220805 00:15:08.504"/>
 </kw>
-<kw name="Get Selenium Timeout" library="SeleniumLibrary">
-<var>${timeout}</var>
-<doc>Gets the timeout that is used by various keywords.</doc>
-<msg timestamp="20220804 14:21:11.808" level="INFO">${timeout} = 5 seconds</msg>
-<status status="PASS" starttime="20220804 14:21:11.808" endtime="20220804 14:21:11.808"/>
+<kw name="Alert Should Not Be Present" library="SeleniumLibrary">
+<arg>Press a button!</arg>
+<doc>Verifies that no alert is present.</doc>
+<msg timestamp="20220805 00:15:08.508" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Alert Text: Press a button!
+Message: unexpected alert open: {Alert text : Press a button!}
+  (Session info: chrome=104.0.5112.79)
+Stacktrace:
+#0 0x562b7f540cd3 &lt;unknown&gt;
+#1 0x562b7f348968 &lt;unknown&gt;
+#2 0x562b7f3b0c4f &lt;unknown&gt;
+#3 0x562b7f39daa3 &lt;unknown&gt;
+#4 0x562b7f3733fa &lt;unknown&gt;
+#5 0x562b7f374555 &lt;unknown&gt;
+#6 0x562b7f5882bd &lt;unknown&gt;
+#7 0x562b7f58c418 &lt;unknown&gt;
+#8 0x562b7f57236e &lt;unknown&gt;
+#9 0x562b7f58d078 &lt;unknown&gt;
+#10 0x562b7f566bb0 &lt;unknown&gt;
+#11 0x562b7f5a9d58 &lt;unknown&gt;
+#12 0x562b7f5a9ed8 &lt;unknown&gt;
+#13 0x562b7f5c3cfd &lt;unknown&gt;
+#14 0x7f0f2f5f0609 &lt;unknown&gt;
+</msg>
+<msg timestamp="20220805 00:15:08.508" level="FAIL">ValueError: Invalid alert action 'PRESS A BUTTON!'.</msg>
+<status status="FAIL" starttime="20220805 00:15:08.504" endtime="20220805 00:15:08.509"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${timeout}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220804 14:21:11.809" endtime="20220804 14:21:11.809"/>
-</kw>
-<kw name="Set Selenium Timeout" library="SeleniumLibrary">
-<arg>10</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" starttime="20220804 14:21:11.809" endtime="20220804 14:21:11.811"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@name='firstname']</arg>
-<arg>Tran</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220804 14:21:11.812" level="INFO">Typing text 'Tran' into text field '//input[@name='firstname']'.</msg>
-<status status="PASS" starttime="20220804 14:21:11.812" endtime="20220804 14:21:11.848"/>
-</kw>
-<kw name="Get Selenium Timeout" library="SeleniumLibrary">
-<var>${timeout}</var>
-<doc>Gets the timeout that is used by various keywords.</doc>
-<msg timestamp="20220804 14:21:11.848" level="INFO">${timeout} = 10 seconds</msg>
-<status status="PASS" starttime="20220804 14:21:11.848" endtime="20220804 14:21:11.848"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${timeout}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220804 14:21:11.848" endtime="20220804 14:21:11.848"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@name='lastname']</arg>
-<arg>Viet</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220804 14:21:11.848" level="INFO">Typing text 'Viet' into text field '//input[@name='lastname']'.</msg>
-<status status="PASS" starttime="20220804 14:21:11.848" endtime="20220804 14:21:11.859"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220804 14:21:11.860" endtime="20220804 14:21:12.220"/>
-</kw>
-<status status="PASS" starttime="20220804 14:20:58.619" endtime="20220804 14:21:12.220"/>
+<status status="FAIL" starttime="20220805 00:15:00.591" endtime="20220805 00:15:08.509">ValueError: Invalid alert action 'PRESS A BUTTON!'.</status>
 </test>
-<status status="PASS" starttime="20220804 14:20:58.549" endtime="20220804 14:21:12.221"/>
+<status status="FAIL" starttime="20220805 00:15:00.517" endtime="20220805 00:15:08.509"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Wait Timeout">Wait Timeout</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Alert">Alert</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220805 00:15:08.508" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Alert Text: Press a button!
+Message: unexpected alert open: {Alert text : Press a button!}
+  (Session info: chrome=104.0.5112.79)
+Stacktrace:
+#0 0x562b7f540cd3 &lt;unknown&gt;
+#1 0x562b7f348968 &lt;unknown&gt;
+#2 0x562b7f3b0c4f &lt;unknown&gt;
+#3 0x562b7f39daa3 &lt;unknown&gt;
+#4 0x562b7f3733fa &lt;unknown&gt;
+#5 0x562b7f374555 &lt;unknown&gt;
+#6 0x562b7f5882bd &lt;unknown&gt;
+#7 0x562b7f58c418 &lt;unknown&gt;
+#8 0x562b7f57236e &lt;unknown&gt;
+#9 0x562b7f58d078 &lt;unknown&gt;
+#10 0x562b7f566bb0 &lt;unknown&gt;
+#11 0x562b7f5a9d58 &lt;unknown&gt;
+#12 0x562b7f5a9ed8 &lt;unknown&gt;
+#13 0x562b7f5c3cfd &lt;unknown&gt;
+#14 0x7f0f2f5f0609 &lt;unknown&gt;
+</msg>
 </errors>
 </robot>
