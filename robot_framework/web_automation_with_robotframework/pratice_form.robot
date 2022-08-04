@@ -5,13 +5,13 @@ Library   OperatingSystem
 Task Setup    open browser
 Task Teardown    close browser
 *** Test Cases ***
-wait_timeout testcase
+practice form
     comment    Complete Selenium - Automation Practice Form
     go to    ${demo_url}
     maximize browser window
 
-    input text    //input[@name='firstname']    Tran
-    input text    //input[@name='lastname']    Viet
+    input text    ${first_name}    Tran
+    input text    ${last_name}    Viet
 
     select radio button    group_name=sex  value=Male
     select radio button    group_name=exp  value=6
