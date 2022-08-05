@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220806 01:05:13.653" rpa="false" schemaversion="3">
+<suite id="s1" name="Scroll" source="D:\PARADOX\automation_test\robot_framework\web_automation_with_robotframework\test_cases\scroll.robot">
+<test id="s1-t1" name="Scroll Test" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${vietnam_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220806 01:05:13.855" level="INFO">Opening browser 'chrome' to base url 'https://en.wikipedia.org/wiki/Vietnam'.</msg>
+<status status="PASS" starttime="20220806 01:05:13.855" endtime="20220806 01:05:18.155"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scroll(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220806 01:05:18.157" level="INFO">Executing JavaScript:
+window.scroll(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220806 01:05:18.156" endtime="20220806 01:05:18.391"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220806 01:05:21.397" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220806 01:05:18.391" endtime="20220806 01:05:21.397"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scroll(0, -document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220806 01:05:21.398" level="INFO">Executing JavaScript:
+window.scroll(0, -document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220806 01:05:21.398" endtime="20220806 01:05:21.409"/>
+</kw>
+<status status="PASS" starttime="20220806 01:05:13.854" endtime="20220806 01:05:21.409"/>
+</test>
+<status status="PASS" starttime="20220806 01:05:13.655" endtime="20220806 01:05:21.411"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Scroll">Scroll</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
