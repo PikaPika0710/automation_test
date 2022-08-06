@@ -1,60 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220806 11:07:56.302" rpa="false" schemaversion="3">
-<suite id="s1" name="Mouse Action" source="D:\PARADOX\automation_test\robot_framework\web_automation_with_robotframework\test_cases\mouse_action.robot">
-<test id="s1-t1" name="Scroll Test" line="5">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220806 13:03:07.814" rpa="false" schemaversion="3">
+<suite id="s1" name="Tables" source="D:\PARADOX\automation_test\robot_framework\web_automation_with_robotframework\test_cases\tables.robot">
+<test id="s1-t1" name="Table Test" line="6">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${vietnam_url}</arg>
+<arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220806 11:07:56.973" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<status status="PASS" starttime="20220806 11:07:56.972" endtime="20220806 11:08:04.180"/>
+<msg timestamp="20220806 13:03:08.030" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20220806 13:03:08.030" endtime="20220806 13:03:14.258"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220806 11:08:04.180" endtime="20220806 11:08:04.305"/>
+<status status="PASS" starttime="20220806 13:03:14.259" endtime="20220806 13:03:14.390"/>
 </kw>
-<kw name="Open Context Menu" library="SeleniumLibrary">
-<arg>//button[normalize-space()='Copy Text']</arg>
-<doc>Opens the context menu on the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220806 11:08:04.305" endtime="20220806 11:08:04.596"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${rows}</var>
+<arg>//*[@id="HTML1"]/div[1]/table/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220806 13:03:14.391" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg timestamp="20220806 13:03:14.408" level="INFO">${rows} = 7</msg>
+<status status="PASS" starttime="20220806 13:03:14.391" endtime="20220806 13:03:14.408"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220806 11:08:07.601" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220806 11:08:04.597" endtime="20220806 11:08:07.601"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${columns}</var>
+<arg>//*[@id="HTML1"]/div[1]/table/tbody/tr/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220806 13:03:14.409" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg timestamp="20220806 13:03:14.424" level="INFO">${columns} = 4</msg>
+<status status="PASS" starttime="20220806 13:03:14.409" endtime="20220806 13:03:14.424"/>
 </kw>
-<kw name="Double Click Element" library="SeleniumLibrary">
-<arg>//button[normalize-space()='Copy Text']</arg>
-<doc>Double clicks the element identified by ``locator``.</doc>
-<msg timestamp="20220806 11:08:07.602" level="INFO">Double clicking element '//button[normalize-space()='Copy Text']'.</msg>
-<status status="PASS" starttime="20220806 11:08:07.601" endtime="20220806 11:08:07.875"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${rows}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220806 13:03:14.425" endtime="20220806 13:03:14.426"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220806 11:08:10.891" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220806 11:08:07.875" endtime="20220806 11:08:10.891"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${columns}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220806 13:03:14.426" endtime="20220806 13:03:14.426"/>
 </kw>
-<kw name="Drag And Drop" library="SeleniumLibrary">
-<arg>//img[@alt='the peaks of high tatras']</arg>
-<arg>//div[@id='trash']</arg>
-<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" starttime="20220806 11:08:10.892" endtime="20220806 11:08:11.464"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${data}</var>
+<arg>//*[@id="HTML1"]/div[1]/table/tbody/tr[6]/td[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220806 13:03:14.455" level="INFO">${data} = Master In Java</msg>
+<status status="PASS" starttime="20220806 13:03:14.426" endtime="20220806 13:03:14.455"/>
 </kw>
-<kw name="Drag And Drop" library="SeleniumLibrary">
-<arg>//img[@alt='The chalet at the Green mountain lake']</arg>
-<arg>//div[@id='trash']</arg>
-<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" starttime="20220806 11:08:11.464" endtime="20220806 11:08:12.040"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220806 13:03:14.455" endtime="20220806 13:03:14.456"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${data}</var>
+<arg>//*[@id="HTML1"]/div[1]/table/tbody/tr[6]/td[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220806 13:03:14.486" level="INFO">${data} = JAVA</msg>
+<status status="PASS" starttime="20220806 13:03:14.456" endtime="20220806 13:03:14.486"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220806 13:03:14.487" endtime="20220806 13:03:14.488"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220806 11:08:12.040" endtime="20220806 11:08:16.040"/>
+<status status="PASS" starttime="20220806 13:03:14.488" endtime="20220806 13:03:16.592"/>
 </kw>
-<status status="PASS" starttime="20220806 11:07:56.966" endtime="20220806 11:08:16.041"/>
+<status status="PASS" starttime="20220806 13:03:08.029" endtime="20220806 13:03:16.592"/>
 </test>
-<status status="PASS" starttime="20220806 11:07:56.305" endtime="20220806 11:08:16.042"/>
+<status status="PASS" starttime="20220806 13:03:07.815" endtime="20220806 13:03:16.594"/>
 </suite>
 <statistics>
 <total>
@@ -63,9 +78,11 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Mouse Action">Mouse Action</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tables">Tables</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220806 13:03:14.391" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg timestamp="20220806 13:03:14.409" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
 </errors>
 </robot>
