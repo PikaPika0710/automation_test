@@ -1,72 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220804 18:22:21.888" rpa="false" schemaversion="3">
-<suite id="s1" name="Windows" source="/home/congviet/Desktop/automation_test/robot_framework/web_automation_with_robotframework/windows.robot">
-<test id="s1-t1" name="WindowTest" line="5">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220805 23:24:08.662" rpa="false" schemaversion="3">
+<suite id="s1" name="Wait Timeout" source="D:\PARADOX\automation_test\robot_framework\web_automation_with_robotframework\test_cases\wait_timeout.robot">
+<test id="s1-t1" name="wait_timeout testcase" line="8">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220804 18:22:21.956" level="INFO">Opening browser 'chrome' to base url 'https://robotframework.org/'.</msg>
-<status status="PASS" starttime="20220804 18:22:21.955" endtime="20220804 18:22:53.592"/>
+<msg timestamp="20220805 23:24:08.865" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20220805 23:24:08.866" level="INFO">Firefox driver log is always forced to to: D:\PARADOX\automation_test\geckodriver-2.log</msg>
+<status status="PASS" starttime="20220805 23:24:08.865" endtime="20220805 23:24:14.308"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220804 18:22:56.594" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220804 18:22:53.592" endtime="20220804 18:22:56.594"/>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${demo_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220805 23:24:14.309" level="INFO">Opening url 'https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm'</msg>
+<status status="PASS" starttime="20220805 23:24:14.309" endtime="20220805 23:24:18.039"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>${selenium_library}</arg>
-<arg>CTRL</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20220804 18:22:56.596" level="INFO">Clicking ['link', 'link'] '//*[@id="app"]/div[5]/div[3]/div[2]/div/div/div[2]/table/tr[2]/td[1]/a' with CTRL.</msg>
-<status status="PASS" starttime="20220804 18:22:56.594" endtime="20220804 18:22:56.923"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20220805 23:24:18.505" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Failed to decode response from marionette
+</msg>
+<msg timestamp="20220805 23:24:18.506" level="FAIL">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:188:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:442:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:493:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:155:4
+GeckoDriver.prototype.maximizeWindow@chrome://remote/content/marionette/driver.js:2486:15
+despatch@chrome://remote/content/marionette/server.js:304:40
+execute@chrome://remote/content/marionette/server.js:277:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:250:20
+onPacket@chrome://remote/content/marionette/server.js:251:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:502:20
+</msg>
+<status status="FAIL" starttime="20220805 23:24:18.039" endtime="20220805 23:24:18.508"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220804 18:22:59.923" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220804 18:22:56.923" endtime="20220804 18:22:59.924"/>
+<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
+<var>${wait}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20220805 23:24:18.508" endtime="20220805 23:24:18.508"/>
 </kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>GitHub - robotframework/SeleniumLibrary: Web testing library for Robot Framework</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220804 18:22:59.925" endtime="20220804 18:23:01.279"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${wait}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220805 23:24:18.508" endtime="20220805 23:24:18.509"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220804 18:23:04.280" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220804 18:23:01.279" endtime="20220804 18:23:04.280"/>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20220805 23:24:18.509" endtime="20220805 23:24:18.509"/>
 </kw>
-<kw name="Close Window" library="SeleniumLibrary">
-<doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20220804 18:23:04.280" endtime="20220804 18:23:04.351"/>
+<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
+<var>${wait}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20220805 23:24:18.509" endtime="20220805 23:24:18.509"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220804 18:23:07.352" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220804 18:23:04.352" endtime="20220804 18:23:07.352"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${wait}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220805 23:24:18.509" endtime="20220805 23:24:18.509"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='firstname1']</arg>
+<arg>Tran</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220805 23:24:18.509" endtime="20220805 23:24:18.509"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='lastname']</arg>
+<arg>Viet</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220805 23:24:18.509" endtime="20220805 23:24:18.509"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220804 18:23:07.352" endtime="20220804 18:23:07.409"/>
+<status status="PASS" starttime="20220805 23:24:18.510" endtime="20220805 23:24:18.514"/>
 </kw>
-<status status="PASS" starttime="20220804 18:22:21.955" endtime="20220804 18:23:07.409"/>
+<status status="FAIL" starttime="20220805 23:24:08.864" endtime="20220805 23:24:18.515">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:188:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.jsm:442:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.jsm:493:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.jsm:155:4
+GeckoDriver.prototype.maximizeWindow@chrome://remote/content/marionette/driver.js:2486:15
+despatch@chrome://remote/content/marionette/server.js:304:40
+execute@chrome://remote/content/marionette/server.js:277:16
+onPacket/&lt;@chrome://remote/content/marionette/server.js:250:20
+onPacket@chrome://remote/content/marionette/server.js:251:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.js:502:20
+</status>
 </test>
-<status status="PASS" starttime="20220804 18:22:21.889" endtime="20220804 18:23:07.409"/>
+<status status="FAIL" starttime="20220805 23:24:08.664" endtime="20220805 23:24:18.516"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Windows">Windows</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Wait Timeout">Wait Timeout</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220805 23:24:18.505" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Failed to decode response from marionette
+</msg>
 </errors>
 </robot>
