@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220807 14:11:37.152" rpa="false" schemaversion="3">
+<suite id="s1" name="Data Driven Testing" source="D:\PARADOX\automation_test\robot_framework\web_automation_with_robotframework\test_cases\data_driven_testing.robot">
+<kw name="Open My Browser" library="resouces" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220807 14:11:37.365" level="INFO">Opening browser 'chrome' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20220807 14:11:37.365" endtime="20220807 14:11:40.362"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220807 14:11:40.362" endtime="20220807 14:11:40.482"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:37.365" endtime="20220807 14:11:40.482"/>
+</kw>
+<test id="s1-t1" name="right username wrong pwd" line="10">
+<kw name="Valid Test">
+<arg>admin@yourstore.com</arg>
+<arg>user</arg>
+<kw name="Login to webpage" library="resouces">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_input}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:40.482" level="INFO">Typing text 'admin@yourstore.com' into text field '//input[@id='Email']'.</msg>
+<status status="PASS" starttime="20220807 14:11:40.482" endtime="20220807 14:11:40.577"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_input}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:40.577" level="INFO">Typing text 'user' into text field '//input[@id='Password']'.</msg>
+<status status="PASS" starttime="20220807 14:11:40.577" endtime="20220807 14:11:40.660"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:40.482" endtime="20220807 14:11:40.660"/>
+</kw>
+<kw name="Click login button" library="resouces">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:40.661" level="INFO">Clicking element '//div[@class='buttons']/button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220807 14:11:40.660" endtime="20220807 14:11:41.037"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:40.660" endtime="20220807 14:11:41.038"/>
+</kw>
+<kw name="Dashboard page should be visible" library="resouces">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220807 14:11:41.151" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220807 14:11:41.151" level="FAIL">Page should have contained text 'Dashboard' but did not.</msg>
+<status status="FAIL" starttime="20220807 14:11:41.039" endtime="20220807 14:11:41.151"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:41.038" endtime="20220807 14:11:41.151"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:40.482" endtime="20220807 14:11:41.151"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:40.482" endtime="20220807 14:11:41.151">Page should have contained text 'Dashboard' but did not.</status>
+</test>
+<test id="s1-t2" name="wrong username right pwd" line="11">
+<kw name="Valid Test">
+<arg>user@yourstore.com</arg>
+<arg>admin</arg>
+<kw name="Login to webpage" library="resouces">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_input}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:41.162" level="INFO">Typing text 'user@yourstore.com' into text field '//input[@id='Email']'.</msg>
+<status status="PASS" starttime="20220807 14:11:41.162" endtime="20220807 14:11:41.243"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_input}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:41.243" level="INFO">Typing text 'admin' into text field '//input[@id='Password']'.</msg>
+<status status="PASS" starttime="20220807 14:11:41.243" endtime="20220807 14:11:41.317"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:41.162" endtime="20220807 14:11:41.317"/>
+</kw>
+<kw name="Click login button" library="resouces">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:41.317" level="INFO">Clicking element '//div[@class='buttons']/button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220807 14:11:41.317" endtime="20220807 14:11:41.684"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:41.317" endtime="20220807 14:11:41.684"/>
+</kw>
+<kw name="Dashboard page should be visible" library="resouces">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220807 14:11:41.802" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220807 14:11:41.802" level="FAIL">Page should have contained text 'Dashboard' but did not.</msg>
+<status status="FAIL" starttime="20220807 14:11:41.684" endtime="20220807 14:11:41.802"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:41.684" endtime="20220807 14:11:41.810"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:41.162" endtime="20220807 14:11:41.810"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:41.162" endtime="20220807 14:11:41.811">Page should have contained text 'Dashboard' but did not.</status>
+</test>
+<test id="s1-t3" name="wrong username wrong pwd" line="12">
+<kw name="Valid Test">
+<arg>user@yourstore.com</arg>
+<arg>user</arg>
+<kw name="Login to webpage" library="resouces">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_input}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:41.811" level="INFO">Typing text 'user@yourstore.com' into text field '//input[@id='Email']'.</msg>
+<status status="PASS" starttime="20220807 14:11:41.811" endtime="20220807 14:11:41.896"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_input}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:41.897" level="INFO">Typing text 'user' into text field '//input[@id='Password']'.</msg>
+<status status="PASS" starttime="20220807 14:11:41.896" endtime="20220807 14:11:41.971"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:41.811" endtime="20220807 14:11:41.971"/>
+</kw>
+<kw name="Click login button" library="resouces">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:41.972" level="INFO">Clicking element '//div[@class='buttons']/button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220807 14:11:41.972" endtime="20220807 14:11:42.292"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:41.971" endtime="20220807 14:11:42.292"/>
+</kw>
+<kw name="Dashboard page should be visible" library="resouces">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220807 14:11:42.424" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220807 14:11:42.424" level="FAIL">Page should have contained text 'Dashboard' but did not.</msg>
+<status status="FAIL" starttime="20220807 14:11:42.293" endtime="20220807 14:11:42.424"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:42.293" endtime="20220807 14:11:42.424"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:41.811" endtime="20220807 14:11:42.424"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:41.811" endtime="20220807 14:11:42.424">Page should have contained text 'Dashboard' but did not.</status>
+</test>
+<test id="s1-t4" name="empty username empty pwd" line="13">
+<kw name="Valid Test">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Login to webpage" library="resouces">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_input}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:42.433" level="INFO">Typing text '' into text field '//input[@id='Email']'.</msg>
+<status status="PASS" starttime="20220807 14:11:42.433" endtime="20220807 14:11:42.500"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_input}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:42.500" level="INFO">Typing text '' into text field '//input[@id='Password']'.</msg>
+<status status="PASS" starttime="20220807 14:11:42.500" endtime="20220807 14:11:42.569"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:42.432" endtime="20220807 14:11:42.569"/>
+</kw>
+<kw name="Click login button" library="resouces">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:42.570" level="INFO">Clicking element '//div[@class='buttons']/button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220807 14:11:42.569" endtime="20220807 14:11:42.610"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:42.569" endtime="20220807 14:11:42.610"/>
+</kw>
+<kw name="Dashboard page should be visible" library="resouces">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220807 14:11:42.771" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220807 14:11:42.771" level="FAIL">Page should have contained text 'Dashboard' but did not.</msg>
+<status status="FAIL" starttime="20220807 14:11:42.611" endtime="20220807 14:11:42.771"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:42.610" endtime="20220807 14:11:42.771"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:42.431" endtime="20220807 14:11:42.781"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:42.428" endtime="20220807 14:11:42.783">Page should have contained text 'Dashboard' but did not.</status>
+</test>
+<test id="s1-t5" name="right username right pwd" line="15">
+<kw name="Valid Test">
+<arg>admin@yourstore.com</arg>
+<arg>admin</arg>
+<kw name="Login to webpage" library="resouces">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_input}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:42.783" level="INFO">Typing text 'admin@yourstore.com' into text field '//input[@id='Email']'.</msg>
+<status status="PASS" starttime="20220807 14:11:42.783" endtime="20220807 14:11:42.918"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_input}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:42.919" level="INFO">Typing text 'admin' into text field '//input[@id='Password']'.</msg>
+<status status="PASS" starttime="20220807 14:11:42.918" endtime="20220807 14:11:43.015"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:42.783" endtime="20220807 14:11:43.015"/>
+</kw>
+<kw name="Click login button" library="resouces">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220807 14:11:43.017" level="INFO">Clicking element '//div[@class='buttons']/button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220807 14:11:43.016" endtime="20220807 14:11:47.021"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:43.016" endtime="20220807 14:11:47.021"/>
+</kw>
+<kw name="Dashboard page should be visible" library="resouces">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220807 14:11:47.034" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" starttime="20220807 14:11:47.022" endtime="20220807 14:11:47.034"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:47.021" endtime="20220807 14:11:47.034"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:42.783" endtime="20220807 14:11:47.034"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:42.783" endtime="20220807 14:11:47.035"/>
+</test>
+<kw name="Close All My Browsers" library="resouces" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220807 14:11:47.037" endtime="20220807 14:11:49.501"/>
+</kw>
+<status status="PASS" starttime="20220807 14:11:47.036" endtime="20220807 14:11:49.501"/>
+</kw>
+<status status="FAIL" starttime="20220807 14:11:37.152" endtime="20220807 14:11:49.501"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="4" skip="0" id="s1" name="Data Driven Testing">Data Driven Testing</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
